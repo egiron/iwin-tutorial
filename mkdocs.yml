@@ -1,0 +1,65 @@
+site_name: IWIN documantation
+nav:
+  - Home: index.md
+  - About: about.md
+theme:
+  name: material
+  features: 
+    - header.autohide
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: teal
+      accent: lime
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: teal
+      accent: lime
+    
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/egiron
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/egirongis
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/ernesto-giron-808b6625/
+
+#extra_css:
+#  - style.css
+
+markdown_extensions:
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - admonition
+  - footnotes
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji 
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+  
+
+copyright:
+  'Copyright &copy; 2021 - 2023 <a href="https://github.com/egiron" target="_blank" rel="noopener">Ernesto Giron E.</a>'
+
