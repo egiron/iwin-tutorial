@@ -10,8 +10,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: Download source
+        uses: actions/checkout@v3
+      - name: Install Python
+        uses: actions/setup-python@v4
         with:
           python-version: 3.x
       - uses: actions/cache@v2
@@ -19,5 +21,9 @@ jobs:
           key: ${{ github.ref }}
           path: .cache
       - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force
+      - name: Build site
+        run: mkdocs build
+      - name: Deploy to gh-pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: mkdocs gh-deploy --force
       
