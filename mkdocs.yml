@@ -2,8 +2,11 @@ site_name: IWIN documantation
 nav:
   - Home: index.md
   - About: about.md
+  - API: references.md
 theme:
   name: material
+  logo: assets/logo_iwin2.png
+  favicon: assets/images/favicon.ico
   features: 
     - header.autohide
     - navigation.tabs
@@ -58,6 +61,51 @@ markdown_extensions:
   - pymdownx.emoji:
         emoji_index: !!python/name:materialx.emoji.twemoji 
         emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
+plugins:
+  - search:
+      lang: en
+  #  - social
+  #- autorefs
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          #paths: [src]  # search packages in the src folder
+          #import:
+          #  - https://docs.python-requests.org/en/master/objects.inv
+          options:
+            summary: true
+            members_order: source
+            #show_root_heading: true
+            show_object_full_path: true
+            #show_root_members_full_path: false
+            show_category_heading: false
+            show_symbol_type_toc: true
+            #show_if_no_docstring: false
+            #show_docstring_attributes: true
+            #show_docstring_functions: true
+            #show_docstring_classes: true
+            show_docstring_examples: true
+            show_docstring_parameters: true
+            show_docstring_other_parameters: true
+            show_docstring_raises: true
+            show_docstring_returns: true
+            show_docstring_warns: false
+            show_source: false
+            show_submodules: true
+            #show_docstring_modules: true
+            #show_docstring_description: false
+            docstring_style: google
+            docstring_section_style: table
+            docstring_options:
+              ignore_init_summary: true
+              trim_doctest_flags: false
+            merge_init_into_class: true
+
+
+
   
 
 copyright:

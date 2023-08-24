@@ -33,7 +33,7 @@ def myFunction():
     pass
 ```
 
-### Code for a specific language
+### Code for a specific language
 
 ``` py title="main.py" linenums="1" hl_lines="1 3"
 import iwin
