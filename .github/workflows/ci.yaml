@@ -20,7 +20,11 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install mkdocs-material
+      - name: Install mkdocs-material
+        run: pip install mkdocs-material
+      - name: Install mkdocstrings
+        run: pip install mkdocstrings
+        run: pip install 'mkdocstrings[python]'
       - name: Build site
         run: mkdocs build
       - name: Deploy to gh-pages
