@@ -72,7 +72,7 @@ plugins:
       default_handler: python
       handlers:
         python:
-          #paths: [src]  # search packages in the src folder
+          paths: [../iwin]  # search packages in the src folder
           #import:
           #  - https://docs.python-requests.org/en/master/objects.inv
           options:
