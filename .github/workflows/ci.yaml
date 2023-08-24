@@ -24,6 +24,7 @@ jobs:
         run: pip install mkdocs-material
       - name: Install mkdocstrings
         run: pip install mkdocstrings
+      - name: Install mkdocstrings python
         run: pip install 'mkdocstrings[python]'
       - name: Build site
         run: mkdocs build
